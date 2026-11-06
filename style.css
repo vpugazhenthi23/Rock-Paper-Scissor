@@ -1,0 +1,59 @@
+ body{
+        background-color: black;
+        color:white;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+    .move-icon{
+        height:70px;
+    }
+    .btn-icon{
+        border-radius: 100%;
+        border-style: solid;
+        border-width: 5px;
+        padding: 20px;
+        border-color: red;
+        background-color: transparent;
+        margin:20px;
+    }
+    .result-icon{
+        font-weight: bolder;
+        font-size: larger;
+        margin-top: 40px;
+    }
+    .run-icon{
+        margin-top:40px;
+        font-weight: bolder;
+        font-size: large;
+        font-variant: small-caps;
+
+    }
+    .reset-icon{
+        color: white;
+        background-color:red;
+        font-size: large;
+        padding: 10px 15px;
+        border-style: solid;
+        border-radius: 15px; 
+        border-color: white; 
+        margin-top: 20px;
+    }
+    .auto-btn{
+        color: white;
+        background-color:red;
+        font-size: large;
+        padding: 10px 15px;
+        border-style: solid;
+        border-radius: 15px;
+        border-color: white; 
+        margin-top: 20px;
+    }
+    .on-btn{
+        color: white;
+        background-color:green;
+        font-size: large;
+        padding: 10px 15px;
+        border-style: solid;
+        border-radius: 15px;
+        border-color: white; 
+        margin-top: 20px;
+    }
