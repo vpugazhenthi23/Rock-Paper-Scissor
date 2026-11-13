@@ -6,34 +6,34 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-</style>
-<body style="margin:20px">
-    <h3>Rock paper Scissors</h3>
-    <button onclick="update('Rock');"class="btn-icon">
-        <img src="Images/Rock-emoji.png" class="move-icon">
-    </button>
-    <button onclick="update('Paper');"class="btn-icon">
-        <img src="Images/Paper-emoji.png" class="move-icon">
-    </button>
-    <button onclick="update('Scissor');"class="btn-icon">
-        <img src="Images/Scissor-emoji.png" class="move-icon">
-    </button>
-    <p class="move"></p>
-    <p class="results result-icon"></p>
-    <p class="js-score run-icon"></p>
-    
-    <button class="js-reset reset-icon" onclick=" 
-        score.wins=0;
-        score.Lose=0;
-        score.Ties=0;
-            localStorage.removeItem('score');
-            scc();
-            document.querySelector('.move' ).innerHTML = '';
-            document.querySelector('.results' ).innerHTML = '';
-    ">Reset Score</button>
-    <button class="auto-btn" onclick="playAuto()">Auto-OFF</button>
+<body>
+    <main class="game-card">
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">Choose your move and see if you can beat the computer.</p>
+
+        <div class="move-choices">
+            <button type="button" class="btn-icon" aria-label="Choose rock" onclick="update('Rock');">
+                <img src="Images/Rock-emoji.png" class="move-icon" alt="">
+            </button>
+            <button type="button" class="btn-icon" aria-label="Choose paper" onclick="update('Paper');">
+                <img src="Images/Paper-emoji.png" class="move-icon" alt="">
+            </button>
+            <button type="button" class="btn-icon" aria-label="Choose scissors" onclick="update('Scissor');">
+                <img src="Images/Scissor-emoji.png" class="move-icon" alt="">
+            </button>
+        </div>
+
+        <p class="move"></p>
+        <p class="results result-icon"></p>
+        <p class="js-score run-icon"></p>
+
+        <div class="game-actions">
+            <button type="button" class="js-reset reset-icon">Reset Score</button>
+            <button type="button" class="auto-btn" onclick="playAuto()">Auto-OFF</button>
+        </div>
+        <div class="auto-alert" role="status" aria-live="polite" aria-atomic="true"></div>
+        <div class="js-text"></div>
+    </main>
     <script src="script.js"></script>
 </body>
-
 </html>
