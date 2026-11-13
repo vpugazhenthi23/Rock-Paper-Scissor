@@ -17,6 +17,7 @@ document.querySelector('.js-reset').addEventListener('click', () => {
         document.querySelector('.results').innerHTML = '';
 
         document.querySelector('.js-text').innerHTML = "";
+        showAlert('Score reseted.');
     })
     document.querySelector('.cs-no').addEventListener('click',()=>{
         document.querySelector('.js-text').innerHTML = "";
@@ -29,13 +30,9 @@ document.querySelector('.js-reset').addEventListener('click', () => {
     document.querySelector('.move').innerHTML = '';
     document.querySelector('.results').innerHTML = ''; */
 })
-let functionPlay = false;
-let setId;
-let autoAlertTimeout;
-
-function showAutoAlert(isOn) {
+function showAlert(message, isOn = false) {
     const autoAlert = document.querySelector('.auto-alert');
-    autoAlert.textContent = `Auto mode is ${isOn ? 'on' : 'off'}.`;
+    autoAlert.textContent = message;
     autoAlert.classList.toggle('is-on', isOn);
     autoAlert.classList.add('is-visible');
     clearTimeout(autoAlertTimeout);
@@ -43,6 +40,9 @@ function showAutoAlert(isOn) {
         autoAlert.classList.remove('is-visible');
     }, 2500);
 }
+let functionPlay = false;
+let setId;
+let autoAlertTimeout;
 
 function playAuto() {
     if (!functionPlay) {
@@ -68,8 +68,7 @@ function playAuto() {
         btn.classList.remove('on-btn');
 
     }
-    showAutoAlert(functionPlay);
-
+    showAlert(`Auto mode is ${functionPlay ? 'on' : 'off'}.`, functionPlay);
 }
 scc();
 document.body.addEventListener("keydown", (event) => {
